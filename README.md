@@ -19,11 +19,6 @@ You will also see any lint errors in the console.
 
 ### `yarn build`
 
-Builds the app in the development mode.\
-The build will be available inside the /build repository, including a main.js file.
-
-### `yarn export`
-
 Builds the app in the production mode.\
 The build will be available inside the /build repository, including a **minified** main.js file.
 
