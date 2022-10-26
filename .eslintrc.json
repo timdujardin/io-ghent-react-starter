@@ -2,36 +2,15 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react-hooks", "import"],
-  "extends": [
-    // "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript"
-  ],
+  "plugins": ["@typescript-eslint", "import"],
+  "extends": ["plugin:@typescript-eslint/recommended"],
   "rules": {
-    "no-unused-vars": "off",
-    "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "off",
-    "camelcase": "off",
-    "quotes": ["error", "double"],
-    "semi": ["error", "always"],
-    "comma-dangle": [
-      "error",
-      {
-        "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "imports": "always-multiline",
-        "exports": "never",
-        "functions": "never"
-      }
-    ],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/prop-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
     "import/order": [
       "error",
       {
@@ -47,11 +26,5 @@
         "pathGroupsExcludedImportTypes": ["builtin"]
       }
     ]
-  },
-  "settings": {
-    "react": {
-      "pragma": "React",
-      "version": "detect"
-    }
   }
 }
