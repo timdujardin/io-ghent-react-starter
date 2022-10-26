@@ -15,33 +15,41 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app in the development mode.\
+The build will be available inside the /build repository, including a main.js file.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `yarn export`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app in the production mode.\
+The build will be available inside the /build repository, including a **minified** main.js file.
 
-### `yarn eject`
+## Babel
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This starter kit is using Babel to convert React and TypeScript code to JavaScript.
+Configuration is available in the .babelrc file on the root.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Below is an explanation of the packages that are installed:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `@babel/core`: As the name suggests, this is the core Babel library.
+- `@babel/preset-env`: This is a collection of plugins that allow us to use the latest JavaScript features but still target browsers that don&apos;t support them.
+- `@babel/preset-react`: This is a collection of plugins that enable Babel to transform React code into JavaScript.
+- `@babel/preset-typescript`: This is a plugin that enables Babel to transform TypeScript code into JavaScript.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Linting
 
-## Learn More
+ESLint is used for this starter kit, configuration is available in the .eslintrc.json file on the root.\
+Below is an explanation of the packages that are installed:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `eslint`: This is the core ESLint library.
+- `eslint-plugin-react`: This contains some standard linting rules for React code.
+- `eslint-plugin-react-hooks`: This includes some linting rules for React hooks code.
+- `@typescript-eslint/parser`: This allows TypeScript code to be linted.
+- `@typescript-eslint/eslint-plugin`: This contains some standard linting rules for TypeScript code.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ESLint in this starter kit is configured to use the TypeScript parser, and the standard React and TypeScript rules as a base set of rules. We&apos;ve explicitly added the two React hooks rules and suppressed the react/prop-types rule because prop types aren&apos;t relevant in React with TypeScript projects. We have also told ESLint to detect the version of React we are using.
+
+## Webpack
+
+This starter kit uses Webpack 5 as the tool to bundle all JavaScript code into the main.js file.
