@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import "./App.css";
+import { Introduction } from "./components/introduction/Introduction";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <Introduction>
+          <h2>iO Ghent React Starter</h2>
+          <p>
+            This project was bootstrapped with Create React App, specifically
+            with typescript:
+          </p>
+          <code>
+            yarn create react-app io-ghent-react-starter --template typescript
+          </code>
+        </Introduction>
+      </main>
     </div>
   );
 }
