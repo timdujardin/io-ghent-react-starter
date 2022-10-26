@@ -1,7 +1,9 @@
 # io-ghent-react-starter
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app),
-specifically with typescript: `yarn create react-app io-ghent-react-starter --template typescript`.
+specifically with typescript.\
+
+`yarn create react-app io-ghent-react-starter --template typescript`.
 
 ## Available Scripts
 
