@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./App.css";
-import { Introduction } from "./components/introduction/Introduction";
+import { Introduction } from "@/components/introduction/Introduction";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <main>
@@ -20,6 +20,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;

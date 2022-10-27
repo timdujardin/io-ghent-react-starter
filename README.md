@@ -50,3 +50,7 @@ ESLint in this starter kit is configured to use the TypeScript parser, and the s
 ## Webpack
 
 This starter kit uses Webpack 5 as the tool to bundle all JavaScript code into the main.js file.
+
+## To do
+
+- Implement [tsconfig-paths-webpack-plugin](https://github.com/dividab/tsconfig-paths-webpack-plugin) as soon as Webpack 5 is supported
